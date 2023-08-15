@@ -5,7 +5,33 @@ Given an (m * n) matrix and an integer, find if the given integer exists in the 
 Link: https://leetcode.com/problems/search-a-2d-matrix/description/
 */
 
-//APPROACH 1: (Using Linear Search)
+//APPROACH 1: (Pure 2D Binary Search)
+//We can apply this since all the rows and cols are sorted in non decreasing order
+bool searchMatrix(vector<vector<int>>& mat, int target) {
+    int m = mat.size();
+    int n = mat[0].size();
+
+    /*This is 2D Binary Search */
+    int si = 0, ei = (m * n)-1;
+    while(si <= ei){
+        int mid = (si + ei) / 2;
+
+        int row = mid / n;
+        int col = mid % n;
+
+        if(mat[row][col] == target){
+            return true;
+        }else if(target > mat[row][col]){
+            si = mid + 1;
+        }else {
+            ei = mid - 1;
+        }
+    }
+
+    return false;
+}
+
+//APPROACH 2: (Using Linear Search)
 //Using Linear Search to determine which row may contain the target. Then using binary Search to search in that row.
      bool binarySearch(vector<int> v, int target){ //This is a helper function module
         int si = 0, ei = v.size()-1;
@@ -40,7 +66,7 @@ Link: https://leetcode.com/problems/search-a-2d-matrix/description/
         return false;
     }
 
-//APPROACH 2: (Using Binary Search)
+//APPROACH 3: (Using Binary Search)
 //This time we are using binary Search for searching the potential answer containing row as well. Then calling binary search on that row
     bool searchMatrix(vector<vector<int>>& matrix, int target){
         int m = matrix.size();
