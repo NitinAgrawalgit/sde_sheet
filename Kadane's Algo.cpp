@@ -1,4 +1,8 @@
-#include <bits/stdc++.h> 
+/** Problem Statement: 
+Given an integer array arr, find the contiguous subarray (containing at least one number) which
+has the largest sum and returns its sum.
+Link: https://leetcode.com/problems/maximum-subarray
+*/
 
 //This solution is the complete Kadane's algo
 //It maintains si and ei so it can print the maximum sum subarray as well
