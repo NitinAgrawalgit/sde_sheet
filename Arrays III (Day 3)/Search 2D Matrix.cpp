@@ -2,7 +2,7 @@
 Given an (m * n) matrix and an integer, find if the given integer exists in the matrix. Given matrix has the following properties:
 1. Integers in each row are sorted from left to right.
 2. The first integer of each row is greater than the last integer of the previous row
-Link: https://leetcode.com/problems/search-a-2d-matrix/description/
+Link: https://www.codingninjas.com/studio/problems/search-in-a-2d-matrix_980531?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTab=1
 */
 
 //APPROACH 1: (Pure 2D Binary Search)
