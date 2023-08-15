@@ -1,8 +1,9 @@
 /** Problem Statement:
 Program to generate Pascal’s Triangle
+Link: https://leetcode.com/problems/set-matrix-zeroes/
 */
 
-//Optimal Approach:
+//OPTIMAL APPROACH:
 vector<vector<int>> pascalTriangle(int N) {
     vector<vector<int>> ans;
 
@@ -24,7 +25,9 @@ vector<vector<int>> pascalTriangle(int N) {
     return ans;
 }
 
-//Another way to implement(Uses Extra Space):
+//ANOTHER APPROACH (Uses Extra Space):
+//Declaring a 2D vector of N*N, filling it with pascal's triangle, then extracting individual rows of increasing size for final answer,
+//because the answer needs to be a jagged array.
 vector<vector<int>> pascalTriangle(int N) {
     /**Not the best approach */
     
