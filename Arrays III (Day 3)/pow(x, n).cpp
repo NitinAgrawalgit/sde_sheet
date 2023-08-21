@@ -4,7 +4,6 @@ Link: https://leetcode.com/problems/powx-n/
 
 //OPTIMAL APPROACH: (Using Binary Exponentiation) RECURSIVE
 //Time: O(log n)
-
     double myPow(double x, int n) {
         if(n == 0){ //Base Case
             return 1;
@@ -24,9 +23,32 @@ Link: https://leetcode.com/problems/powx-n/
         return ans;
     }
 
+//ABOVE APPROACH BUT (ITERATIVE)
+//Time: O(log n)
+double myPow(double x, int n) {
+    long N = n;
+    if(N < 0){
+        N = -1 * N;
+        x = 1.0 / x;
+    }
+    
+    double ans = 1.0;
+    
+    while(N > 0){
+        if(N % 2 == 0){
+            x *= x;
+            N /= 2;
+        }else {
+            ans *= x;
+            N -= 1;
+        }
+    }
+
+    return ans;
+}
+
 //BRUTE FORCE: (Gives TLE)
 //Time: O(n)
-
     double myPow(double x, int n) {
         double ans = 1.0;
         
