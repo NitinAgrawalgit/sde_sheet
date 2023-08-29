@@ -1,5 +1,5 @@
 /* Problem: Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times. Where ⌊ n/3 ⌋ is floor(n/3).
-Link: https://www.codingninjas.com/studio/problems/majority-element_6915220?utm_source=striver&utm_medium=website&utm_campaign=codestudio_a_zcourse&leftPanelTab=0
+Link: https://leetcode.com/problems/majority-element-ii/
 */
 
 //OPTIMAL APPROACH: (Boyer Moore's algo extended)
